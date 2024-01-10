@@ -378,24 +378,24 @@
 
 
 
-nested_dict = {
-    'person1': {
-        'name': 'John',
-        'age': 30,
-        'address': {
-            'city': 'New York',
-            'zip_code': '10001'
-        }
-    },
-    'person2': {
-        'name': 'Alice', 
-        'age': 25,
-        'address': {
-            'city': 'San Francisco',
-            'zip_code': '94105'
-        }
-    }
-}
+# nested_dict = {
+#     'person1': {
+#         'name': 'John',
+#         'age': 30,
+#         'address': {
+#             'city': 'New York',
+#             'zip_code': '10001'
+#         }
+#     },
+#     'person2': {
+#         'name': 'Alice', 
+#         'age': 25,
+#         'address': {
+#             'city': 'San Francisco',
+#             'zip_code': '94105'
+#         }
+#     }
+# }
 
 # newdicta = {}
 # kk =""
@@ -426,3 +426,88 @@ nested_dict = {
 #     return newdict
                 
 # print(flat(nested_dict,newdict))
+
+
+
+
+# def most_frequent_item(lst):
+
+#     dicta = {}
+    
+#     for i in lst:
+#         if i not in dicta:
+#             dicta[i]=1
+#         else:
+#             dicta[i]+=1
+    
+#     maxkey =0
+#     for i in dicta:
+#         if dicta[i] > maxkey:
+#             maxkey= dicta[i]
+    
+#     for i in dicta: 
+#         if dicta[i] ==maxkey:
+#             return i
+#     # maxi = {key:val for key,val in dicta.items() if val > maxkey }
+#     return dicta
+
+
+# print(most_frequent_item(["ken", "osei","hel", "fg","fg","hel","hel" ,"ken"]))
+
+
+# def merge_dicts(dict1, dict2):
+#     newdict ={}
+
+#     for i,v in dict1.items():
+#         if i not in newdict: 
+#             newdict[i] = v
+
+#     for i,v in dict2.items():
+#         if i not in newdict: 
+#             newdict[i] = v
+#         else:
+#             newdict[i] += v
+
+#     return newdict
+
+# print(merge_dicts({"g":1,"f":2},{"g":1}))
+
+
+
+
+# def invert_dict(d):
+#     newd = {}
+#     for i,v in d.items():
+#         # i,v =v,i
+#         newd[v] = i
+    
+#     return newd
+
+# print(invert_dict({"g":1,"f":2}))
+
+
+
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+
+
+# def square_matrix_simple(matrix=[]):
+#     newmat = []
+#     for i in matrix:
+#         for j in range(len(i)):
+#             i[j] = i[j]**2
+#         newmat.append(i)
+
+#     return newmat
+
+
+# newmat = list(map(lambda a: list(map(lambda b: b**2, a)),matrix))
+
+# print(newmat)
+
+# print(square_matrix_simple(matrix))
