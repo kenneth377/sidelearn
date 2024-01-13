@@ -511,3 +511,28 @@
 # print(newmat)
 
 # print(square_matrix_simple(matrix))
+
+
+
+
+# def search_replace(my_list, search, replace):
+#     new_list = []
+#     for i in range(len(my_list)):
+#         if my_list[i]== search:
+#             # my_list[i] = replace
+#             new_list.append(replace)
+        
+#         else:
+#             new_list.append(my_list[i])
+#             # return my_list
+        
+#     return new_list
+
+# my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
+# search = 2
+# replace =32
+# # new_list = search_replace(my_list, 2, 89)
+
+# new_list = list(map(lambda a: replace if a == search else a,my_list))
+# print(new_list)
+# print(my_list)
