@@ -1,0 +1,18 @@
+>>> import sys
+>>> sys.path.append('../')  
+>>> from addtest import add
+
+"""Learning Testing"""
+
+Testing for regular integers
+>>> add(4, 1)
+5
+
+Testing for string
+>>> add("aa",4)
+Traceback (most recent call last):
+TypeError: here is the error
+
+Testing for float type
+>>> add(2.0,5)
+7

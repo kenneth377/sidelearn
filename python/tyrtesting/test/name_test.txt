@@ -1,0 +1,22 @@
+"""Importing the name module"""
+
+>>> import sys
+>>> sys.path.append("../")
+
+>>> from name  import say_my_name
+
+"""Actual Testing """
+
+>>> say_my_name("Akua","Mansa")
+'My name is Akua Mansa'
+
+>>> say_my_name(1, "Mansa")
+Traceback (most recent call last):
+TypeError: first_name must be a string or last_name must be a string
+
+>>> say_my_name("Akua", 2)
+Traceback (most recent call last):
+TypeError: first_name must be a string or last_name must be a string
+
+>>> say_my_name("Akua")
+'My name is Akua '
