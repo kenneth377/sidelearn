@@ -39,12 +39,10 @@ int main() {
     printf("%s\n", newn->value);
     printf("%d\n", hashfunc(newn->value));
 
-    // Initialize HASHTABLE with NULL pointers
     for (int i = 0; i < TABLE_SIZE; i++) {
         HASHTABLE[i] = NULL;
     }
 
-    // Initialize hash table with new node
     int result = hashinit(newn);
     if (result == 1) {
         printf("Node inserted successfully into hash table.\n");
@@ -52,6 +50,6 @@ int main() {
         printf("Collision occurred. Node not inserted into hash table.\n");
     }
 
-    free(newn); // Don't forget to free dynamically allocated memory
+    free(newn); 
     return 0;
 }
