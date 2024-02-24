@@ -1,4 +1,4 @@
-from base import Base
+
 
 
 class Rectangle(Base):
@@ -74,9 +74,6 @@ class Rectangle(Base):
 
             print()
 
-    def __str__(self):
-        return f"[Rectangle] {self.id} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
-
     def update(self, *args, **kwargs):
         if args:
             if len(args) >= 1:
@@ -102,12 +99,32 @@ class Rectangle(Base):
                 elif key == 'y':
                     self.__y = value
 
+    def __str__(self):
+        return f"[Rectangle] {self.id} {self.x}/{self.y} - {self.width}/{self.height}"
+
     def to_dictionary(self):
         return {
             "id": self.id,
-            "width":self.__width,
-            "height": self.__height,
-            "x": self.__x,
-            "y": self.__y
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
         }
  
+
+if __name__ == "__main__":
+
+
+    r1 = Rectangle(1,1,4,4)
+    r2 = Rectangle(2,2, 8,8)
+
+    Rectangle.save_to_file_csv([r1.to_dictionary(),r2.to_dictionary()])
+
+    print(Rectangle.load_from_file_csv())
+
+    s1 = Square(1,1,4,4)
+    s2 = Square(2,2, 8,8)
+
+    Rectangle.save_to_file_csv([s1.to_dictionary(),s2.to_dictionary()])
+
+    Base.draw(Rectangle.load_from_file_csv(), Square.load_from_file_csv())

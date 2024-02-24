@@ -9,7 +9,7 @@ typedef struct Node node;
 struct Node {
     char *value;
     char *key;
-    node *next; // Pointer to the next node in case of collisions
+    node *next; 
 };
 
 node *HASHTABLE[TABLE_SIZE];
@@ -28,15 +28,12 @@ unsigned int hashfunc(char *s) {
 int hashinit(node *k) {
     int hashval = hashfunc(k->key);
     
-    // Check for collision
     if (HASHTABLE[hashval] != NULL) {
-        // Collision occurred, prepend new node to the existing chain
         k->next = HASHTABLE[hashval];
     }
 
-    HASHTABLE[hashval] = k; // Update hash table entry
-    
-    return 1; // Successful insertion
+    HASHTABLE[hashval] = k; 
+    return 1; 
 }
 
 void printhash(node **HASHTABLE) {
@@ -136,7 +133,6 @@ int main() {
     printf("%d\n",rr);
     printhash(HASHTABLE);
     
-    // Free allocated memory
     free(newn);
     free(newn2);
 
